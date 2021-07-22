@@ -6,13 +6,13 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     compileOptions.encoding = 'UTF-8'
-    compileSdkVersion 30
-    buildToolsVersion '30.0.3'
+    compileSdkVersion 31
+    buildToolsVersion '31.0.0'
     defaultConfig {
         Date date = new Date()
         applicationId "com.fuckcoolapk"
         minSdkVersion 23
-        targetSdkVersion 30
+        targetSdkVersion 31
         versionCode = date.format("yyyyMMdd").toInteger()
         versionName '0.5.8'
 
@@ -66,6 +66,7 @@ android {
     buildFeatures {
         viewBinding true
     }
+    ndkVersion '22.1.7171670'
 }
 
 //https://github.com/LSPosed/LSPosed/blob/02b4ba01d83735d4a7db60ae4fc35c57ebc2d07c/app/build.gradle#L84
@@ -98,7 +99,7 @@ dependencies {
     implementation 'androidx.annotation:annotation:1.2.0'
     implementation 'commons-codec:commons-codec:20041127.091804'
     implementation 'com.huangyz0918:androidwm-light:0.1.2'
-    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.2'
     //debugImplementation "com.github.chuckerteam.chucker:library:3.4.0"
     //releaseImplementation "com.github.chuckerteam.chucker:library-no-op:3.4.0"
 }
@@ -111,7 +112,7 @@ dependencies {
     //implementation"org.commonmark:commonmark-ext-task-list-items:0.17.1"
 }
 dependencies {
-    def appCenterSdkVersion = '4.1.1'
+    def appCenterSdkVersion = '4.2.0'
     implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
     implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
 }
